@@ -1,6 +1,5 @@
 import {Animated, ViewStyle} from "react-native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
-import {RootStackParamList} from "../navigation/Navigations";
 
 export interface IResponse {
     id: string,
@@ -39,7 +38,13 @@ export interface FetchBaseQuery {
 }
 
 
+export type RootStackParamList = {
+    MainScreen: undefined,
+    WelcomePage: undefined,
+    PhotoPage: {id: string},
+}
+
 export type PropsMainScreen = NativeStackScreenProps<RootStackParamList, "WelcomePage", "PhotoPage">
 export type PropsPhotoPage = NativeStackScreenProps<RootStackParamList, "PhotoPage">
-export type PropsWelcomePage = NativeStackScreenProps<RootStackParamList, "MainScreen">
 
+export type PropsWelcomePage = NativeStackScreenProps<RootStackParamList, "MainScreen">

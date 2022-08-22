@@ -4,12 +4,7 @@ import WelcomePage from "../components/WelcomePage";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import { NavigationContainer } from '@react-navigation/native';
 import PhotoPage from "../components/PhotoPage";
-
-export type RootStackParamList = {
-    MainScreen: undefined,
-    WelcomePage: undefined,
-    PhotoPage: {id: string},
-}
+import {RootStackParamList} from "../store/types";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
